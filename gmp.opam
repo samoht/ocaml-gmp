@@ -11,9 +11,13 @@ build: [
  ["dune" "runtest" "-p" name] {with-test}
 ]
 depends: [
+  "conf-m4"
   "ocaml"
   "dune" {>= "2.4.0"}
 ]
+
+pin-depends: ["solo5.dev" "git+https://github.com/samoht/ocaml-solo5.git#dune"]
+
 available: arch = "x86_64" | arch = "x86_64"
 synopsis: "The GNU Multiple Precision Arithmetic Library"
 description: "Freestanding build of GNU GMP."
