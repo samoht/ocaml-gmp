@@ -1,7 +1,8 @@
 #!/bin/sh -ex
 
 # autoconf host == dune target
-TARGET=$1
+TARGET=${OCAML_TARGET:-$1}
+
 shift
 CC=$1
 shift
