@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/sh -eu
 
 # autoconf host == dune target
 TARGET=${OCAML_TARGET:-$1}

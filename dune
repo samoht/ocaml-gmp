@@ -8,4 +8,7 @@
   (source_tree src))
  (targets gmp.h libgmp.a)
  ; FIXME: configure target with a context variable
- (action (run ./build.sh %{ocaml-config:target} %{cc})))
+ (action
+  (with-stdout-to
+   build.logs
+   (run ./build.sh %{ocaml-config:target} %{cc}))))
