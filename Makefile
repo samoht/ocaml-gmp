@@ -23,7 +23,7 @@ clean:
 	rm -f ${ARCHIVE}
 
 src: ${ARCHIVE}
-	tar xvfz ${ARCHIVE}
+	tar xvf ${ARCHIVE}
 	mv ${NAME} src
 
 ${ARCHIVE}:
